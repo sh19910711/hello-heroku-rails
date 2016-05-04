@@ -1,0 +1,11 @@
+{
+  "name": "hello-heroku-docker",
+  "image": "heroku/ruby:2.3.0",
+  "success_url": "/welcome",
+  "addons": [
+    "heroku-postgresql:hobby-dev"
+  ],
+  "scripts": {
+    "postdeploy": "bundle exec rake db:migrate"
+  }
+}
